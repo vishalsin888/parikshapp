@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+
+                        <mat-card-title>
+                            Read The Instructions Of this Quiz Page Carefully
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            One More Step To Go
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="ml-20" *ngIf="quizData">
+                        <h1>{{quizData.title}}</h1>
+                        <p>{{quizData.description}}</p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+                        <ul>
+                            <li>This Quiz is only for practice purpose</li>
+                            <li>You have to submit the quiz within <b>{{quizData.numberOfQuestions*2}} Minutes</b></li>
+                            <li>You can Attempt the quiz number of times.</li>
+                            <li>There are <b>{{quizData.numberOfQuestions}} Questions</b> in this Quiz</li>
+                            <li>Each Question carries <b>{{quizData.maxMarks/quizData.numberOfQuestions}} Marks</b></li>
+                            <li>There is no negative marking </li>
+                            <li>All Questions are of MCQ's Type</li>
+                            <br>
+                            <mat-divider></mat-divider>
+                        </ul>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click On Start Button to Start the Quiz</li>
+                            <li>scroll down to attempt more questions</li>
+                            <li>Click on Submit button to submit the Quiz</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center mb20 mt20">
+                        <button mat-raised-button color="accent"  (click)="startQuiz()" >Start</button>
+                        <button mat-raised-button color="warn" [routerLink]="'/user-dashboard/0'">Cancel</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

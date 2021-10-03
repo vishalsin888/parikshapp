@@ -1,0 +1,14 @@
+.prof-img{
+    max-width: 140px;
+    max-height: 140px;
+    border: 2px solid #ff4081;
+    border-radius: 50%;
+}
+.table{
+    width: 100%;
+   border-collapse: collapse;
+}
+.table tr td{
+    padding: 15px 10px;
+    border:  0.5px solid #e2e2e2;
+}
